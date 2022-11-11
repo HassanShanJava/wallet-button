@@ -1,23 +1,61 @@
-import logo from './logo.svg';
-import './App.css';
+import React,{useState} from "react";
+
+// import { useWeb3React } from "@web3-react/core";
+
+// import { Injected, CoinbaseWallet, WallectConnect } from "./connector";
+import { Buffer } from 'buffer';
+import Modal from "./component/Modal";
+import Account from "./component/Modal";
+
+
 
 function App() {
+  // const { activate, deactivate } = useWeb3React();
+  
+  const [modal,setModal] =useState(false)
+  
+  // I've tried all the answers here to resolve this issue and nothing worked for me. What did work for me was putting the following in my polyfills.ts:
+  
+  
+  // @ts-ignore
+  Buffer.from("anything", "base64");
+  window.Buffer = window.Buffer || require("buffer").Buffer;
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* <button
+        onClick={async () => {
+          await activate(CoinbaseWallet);
+        }}
+      >
+        Coinbase Wallet
+      </button>
+      <button
+        onClick={async () => {
+          await activate(WallectConnect);
+        }}
+      >
+        Wallet Connect
+      </button>
+
+      <button
+        onClick={ () => {
+          try {
+            activate(Injected);
+          } catch (ex) {
+            console.log(ex);
+          }
+        }}
+      >
+        Metamask
+      </button>
+
+      <button onClick={deactivate}>Disconnect</button> */}
+      <h1>Click Me</h1>
+      <button className='openModal' onClick={()=>setModal(true)}>Click</button>
+        
+      {modal&&(<p>{Account}</p>)}
+      {modal&&<Modal closeModal={setModal}/>}
+      <button className='openModal' >Wallet</button>
     </div>
   );
 }
