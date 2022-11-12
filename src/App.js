@@ -6,7 +6,7 @@ import React, { useState } from "react";
 import { Buffer } from "buffer";
 // import Modal from "./component/Modal";
 // import Account from "./component/Modal";
-// import Button from "./Button";
+import Button from "./Button";
 
 function App() {
   // const { activate, deactivate } = useWeb3React();
