@@ -4,14 +4,14 @@ import React, { useState } from "react";
 
 // import { Injected, CoinbaseWallet, WallectConnect } from "./connector";
 import { Buffer } from "buffer";
-import Modal from "./component/Modal";
-import Account from "./component/Modal";
-import Button from "./Button";
+// import Modal from "./component/Modal";
+// import Account from "./component/Modal";
+// import Button from "./Button";
 
 function App() {
   // const { activate, deactivate } = useWeb3React();
 
-  const [modal, setModal] = useState(false);
+  // const [modal, setModal] = useState(false);
 
   // I've tried all the answers here to resolve this issue and nothing worked for me. What did work for me was putting the following in my polyfills.ts:
 
